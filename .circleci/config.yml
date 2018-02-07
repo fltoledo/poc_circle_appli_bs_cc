@@ -14,7 +14,7 @@ jobs:
       # documented at https://circleci.com/docs/2.0/circleci-images/
       # - image: circleci/postgres:9.4
 
-    OUT: ./OUTput
+    OUT: ./output
 
     steps:
       - checkout
@@ -41,20 +41,21 @@ jobs:
       - run:
           name: Run test and generate json results
           command: |
-            mkdir -p $OUT
-            bundle exec cucumber --out=$OUT
+            echo $OUT
+            mkdir -p ./output
+            bundle exec cucumber --out=./output
           when: always
       - store_test_results:
-          path: $OUT
+          path: ./output
       - store_artifacts:
-          path: $OUT
+          path: ./output
 
       - run:
           name: Convert json results to html report
           command: |
-            bundle exec report_builder -s $OUT --out=$OUT
+            bundle exec report_builder -s ./output --out=./output
           when: always
       - store_test_results:
-          path: $OUT
+          path: ./output
       - store_artifacts:
-          path: $OUT
+          path: ./output
