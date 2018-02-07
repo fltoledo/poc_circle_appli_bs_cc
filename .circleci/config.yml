@@ -42,7 +42,7 @@ jobs:
           name: Run test and generate json results
           command: |
             mkdir -p ~/cucumber
-            bundle exec cucumber --format progress --format json --out ~/cucumber/output.json --tag 'not @ignore'
+            bundle exec cucumber --format json --out ~/cucumber/output.json --tag 'not @ignore'
           when: always
       - store_test_results:
           path: ~/cucumber
