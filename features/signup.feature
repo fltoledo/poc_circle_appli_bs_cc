@@ -1,7 +1,7 @@
 Feature: Sign up 
 
 	Background:
-		Given a new 'chrome' browser in 'local'
+		Given a new 'chrome' browser in 'cloud'
 		#Given a new 'chrome' browser in 'cloud'
 
 	# POSITIVE
