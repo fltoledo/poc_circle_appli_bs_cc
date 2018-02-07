@@ -41,9 +41,8 @@ jobs:
       - run:
           name: Run test and generate json results
           command: |
-            echo $OUT
             mkdir -p ./output
-            bundle exec cucumber --out=./output
+            bundle exec cucumber --out=./output.json
           when: always
       - store_test_results:
           path: ./output
