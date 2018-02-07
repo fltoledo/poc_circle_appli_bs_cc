@@ -1,2 +1,3 @@
-default: -p html_report 
+default: -p json_report 
 html_report: --format progress --format html --out=output/features_report.html  --tag 'not @ignore'
+json_report: --format json --tag 'not @ignore'
