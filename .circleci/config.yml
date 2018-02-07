@@ -50,7 +50,7 @@ jobs:
       - run:
           name: Convert json results to html report
           command: |
-            bundle exec report_builder -s ./output --out=./output
+            bundle exec report_builder -s ./output --out=./output/report.html
           when: always
       - store_test_results:
           path: ./output
