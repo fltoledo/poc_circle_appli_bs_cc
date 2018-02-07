@@ -41,20 +41,20 @@ jobs:
       - run:
           name: Run test and generate json results
           command: |
-            mkdir -p ~/output
-            bundle exec cucumber --out=~/output/
+            mkdir -p output
+            bundle exec cucumber --out=output/
           when: always
       - store_test_results:
-          path: ~/output
+          path: output
       - store_artifacts:
-          path: ~/output
+          path: output
 
       - run:
           name: Convert json results to html report
           command: |
-            bundle exec report_builder -s ~/output/ --out=~/output/
+            bundle exec report_builder -s output/ --out=output/
           when: always
       - store_test_results:
-          path: ~/output
+          path: output
       - store_artifacts:
-          path: ~/output
+          path: output
