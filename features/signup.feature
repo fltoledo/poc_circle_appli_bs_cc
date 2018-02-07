@@ -1,7 +1,7 @@
 Feature: Sign up 
 
 	Background:
-		Given a new 'chrome' browser in 'local'
+		Given a new 'chrome' browser in 'cloud'
 		#Given a new 'chrome' browser in 'cloud'
 
 	# POSITIVE
@@ -13,7 +13,8 @@ Feature: Sign up
         Then The home page is loaded
 
 	# NEGATIVE
-
+	
+	@ignore 
 	Scenario: Sign up with an existing email 
 		Given I navigate to The RealReal homepage
 		When I fill the signup form with email 'mm_crm@therealreal.com' and password 'ValidPassword9'
