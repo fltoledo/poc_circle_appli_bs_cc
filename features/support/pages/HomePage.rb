@@ -1,5 +1,5 @@
 
-
+require_relative 'PageBase'
 class HomePage < PageBase
     
     link(:welcomeMsg, :css => 'div.head-utility-row__member-msg > a')
