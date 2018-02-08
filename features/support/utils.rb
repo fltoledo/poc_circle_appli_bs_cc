@@ -17,7 +17,10 @@ class Utils
 		caps[:browser] = browserName
 		caps[:browser_version] = "50"
 		caps["browserstack.debug"] = "true"
-		
+		caps["project"] = "proyecto"
+		caps["build"] = "3"
+		caps["name"] = "testrun"
+
 		#caps[:browserName] = 'iPhone'
 		#caps['device'] = 'iPhone 7'
 		#caps['realMobile'] = 'true'

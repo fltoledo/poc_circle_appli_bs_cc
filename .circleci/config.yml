@@ -47,12 +47,12 @@ jobs:
       - store_artifacts:
           path: ./output
 
-      - run:
-          name: Convert json results to html report
-          command: |
-            bundle exec report_builder -s ./output --out=./output/report
-          when: always
-      - store_test_results:
-          path: ./output
-      - store_artifacts:
-          path: ./output
+    #   - run:
+    #       name: Convert json results to html report
+    #       command: |
+    #         bundle exec report_builder -s ./output --out=./output/report
+    #       when: always
+    #   - store_test_results:
+    #       path: ./output
+    #   - store_artifacts:
+    #       path: ./output
