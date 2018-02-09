@@ -11,6 +11,7 @@ Before do
 end
 
 After do |scenario|
+	
 	if scenario.failed?
 		encoded_img = $browser.driver.screenshot_as(:base64)
 		embed("data:image/png;base64,#{encoded_img}",'image/png')
@@ -24,7 +25,7 @@ at_exit do
 		config.report_types = [:html]
 		config.report_title = 'The RealReal Results'
 		config.include_images = true
-		config.additional_info = {browser: 'Chrome', environment: 'Staging'}
+		config.additional_info = {browser: 'Chrome', environment: 'Staging', link_browserstack: "<a href='https://www.browserstack.com/automate'>See session in BrowserStack<a/>"}
 	end
 
 	ReportBuilder.build_report
