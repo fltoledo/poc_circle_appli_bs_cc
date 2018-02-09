@@ -17,7 +17,7 @@ class SignupPage
     self.user_email = email
     self.user_password = password
     self.user_password_confirmation = password
-    signupBtn
+    signupBtn_element.click
   end
     
   def loaded?
